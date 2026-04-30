@@ -13,13 +13,13 @@ The agent learns by playing games against itself, receiving rewards for capturin
 ### Fresh training
 
 ```bash
-python chessRL_fixed.py --mode train --episodes 10000 --save chess_agent.pth
+python chessRL.py --mode train --episodes 10000 --save chess_agent.pth
 ```
 
 ### Resume training from a saved checkpoint
 
 ```bash
-python chessRL_fixed.py --mode resume --episodes 5000 --save chess_agent.pth --epsilon 0.3
+python chessRL.py --mode resume --episodes 5000 --save chess_agent.pth --epsilon 0.3
 ```
 
 Use `--epsilon` to set the starting exploration rate. After initial training, a value of 0.2–0.5 is recommended so the agent exploits what it has learned while still exploring.
@@ -27,7 +27,7 @@ Use `--epsilon` to set the starting exploration rate. After initial training, a 
 ### Watch a saved agent play a game
 
 ```bash
-python chessRL_fixed.py --mode watch --save chess_agent.pth
+python chessRL.py --mode watch --save chess_agent.pth
 ```
 
 ### All options
